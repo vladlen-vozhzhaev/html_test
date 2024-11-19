@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .container{
+        width: 300px;
+        background: black;
+        margin: auto;
+        border: 4px solid gray;
+      }
+      .stop, .wait, .go{
+        width: 150px;
+        height: 150px;
+        margin: 15px auto;
+        border-radius: 50%;
+        border: 2px solid silver;
+        box-shadow: inset 0 0 20px 10px rgba(0,0,0, .7);
+        background: gray;
+      }
+      .stop{
+        animation: stop_key 20s infinite;
+      }
+      .wait{
+        animation: wait_key 20s infinite;
+      }
+      .go{
+        animation: go_key 20s infinite;
+      }
+      @keyframes stop_key {
+        0%{background: red;}
+        19%{background: red;}
+        20%{background: gray;}
+        59%{background: gray;}
+        60%{background: red;}
+        100%{background: red;}
+      }
+      @keyframes wait_key {
+        19%{background: gray;}
+        20%{background: yellow;}
+        29%{background: yellow;}
+        30%{background: gray;}
+        49%{background: gray;}
+        50%{background: yellow;}
+        59%{background: yellow;}
+        60%{background: gray;}
+      }
+      @keyframes go_key {
+        29%{background: gray;}
+        30%{background: lime;}
+        49%{background: lime;}
+        50%{background: gray;}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="stop"></div>
+      <div class="wait"></div>
+      <div class="go"></div>
+    </div>
+  </body>
+</html>
